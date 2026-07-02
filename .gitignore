@@ -74,3 +74,4 @@ examples/
 repositories/
 
 *.out
+/manu_test/image_test_out

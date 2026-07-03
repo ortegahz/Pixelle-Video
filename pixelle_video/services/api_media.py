@@ -28,6 +28,7 @@ class APIProviderMediaService:
         ],
         "openai": [
             "gpt-image-2",
+            "glm-image",
         ],
         "seedream": [
             "doubao-seedream-5-0-260128",

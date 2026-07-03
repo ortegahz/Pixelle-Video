@@ -62,7 +62,7 @@ class ImageGPT:
             print(f"Error encoding image {image_path}: {e}")
             return image_path
 
-    def generate_image(self, prompt, size="1024x1024", quality="high", model="gpt-image-2",
+    def generate_image(self, prompt, size="1024x1024", quality="standard", model="gpt-image-2",
                        save_dir=None, image_urls=None):
         """Generate a single image, download it, and return the local file path.
 

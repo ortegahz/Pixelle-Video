@@ -173,8 +173,13 @@ class ImageClient:
             
         # Determine backend provider
         is_seedream = "seedream" in model.lower()
-        is_sora = "sora" in model.lower() or "gpt" in model.lower()
-        
+        # is_sora = "sora" in model.lower() or "gpt" in model.lower()
+        is_sora = (
+                "sora" in model.lower()
+                or "gpt" in model.lower()
+                or "glm" in model.lower()  # <- 加这一段
+        )
+
         # Prepare save directory
         if not save_dir:
             if session_id:
@@ -213,7 +218,11 @@ class ImageClient:
                 
                 # OpenAI uses 'x' separator, e.g. 1024x1024
                 # Attempt to map size if needed or just replace '*'
-                gpt_size = size.replace('*', 'x') if size else "1024x1024"
+                # gpt_size = size.replace('*', 'x') if size else "1024x1024"
+                if "glm-image" in (model or "").lower():
+                    gpt_size = "1024x1024"
+                else:
+                    gpt_size = size.replace('*', 'x') if size else "1024x1024"
 
                 path = self.gpt_client.generate_image(
                     prompt=prompt,

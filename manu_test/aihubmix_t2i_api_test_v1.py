@@ -106,7 +106,7 @@ async def main():
         help='OpenAI-style response_format: usually "b64_json" or "url"',
     )
 
-    parser.add_argument("--quality", default="", help="Optional quality; empty => not sent")
+    parser.add_argument("--quality", default="standard", help="Optional quality; empty => not sent")
     parser.add_argument("--save-dir", default="image_glm_test_out_v2", help="Where to save png (empty disables saving)")
     parser.add_argument("--download-auth", action="store_true", help="If downloading url, send Authorization header")
     parser.add_argument("--debug-request", action="store_true", help="Print request (no secrets)")

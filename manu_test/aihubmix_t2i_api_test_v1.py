@@ -97,7 +97,7 @@ async def main():
     parser.add_argument("--api-key", default="", help="API key")
     parser.add_argument("--model", default="glm-image", help="Model name (default: glm-image)")
     parser.add_argument("--prompt", default="A cute orange cat lying on a sunny windowsill, watercolor style")
-    parser.add_argument("--size", default="1024x1024", help='OpenAI images size like "1024x1024"')
+    parser.add_argument("--size", default="1920x1088", help='OpenAI images size like "1024x1024"')
     parser.add_argument("--n", type=int, default=1, help="Number of images")
 
     parser.add_argument(

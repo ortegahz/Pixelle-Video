@@ -220,7 +220,7 @@ class ImageClient:
                 # Attempt to map size if needed or just replace '*'
                 # gpt_size = size.replace('*', 'x') if size else "1024x1024"
                 if "glm-image" in (model or "").lower():
-                    gpt_size = "1024x1024"
+                    gpt_size = "1920x1088"
                 else:
                     gpt_size = size.replace('*', 'x') if size else "1024x1024"
 

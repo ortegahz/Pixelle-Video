@@ -75,3 +75,4 @@ repositories/
 
 *.out
 /manu_test/image_test_out
+/image_glm_test_out_v2
